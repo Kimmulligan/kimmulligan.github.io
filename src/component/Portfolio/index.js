@@ -1,56 +1,58 @@
 import React, { useState } from 'react';
 
-function Portfolio({currentCategory}) {
-  const { name, description } = currentCategory;
-  const [photos] = useState([
+function Portfolio({ category }) {
+ //const { name, description } = currentProject;
+  const [projects] = useState([
     {
-      name: "Grocery aisle",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+      name: "Wantings",
+      description: "JavaScript-CSS-HTML5-MYSQL-Handlebars-Bootstrap",
+      gitHubUrl:"https://github.com/rawagschal/wantings",
+      deployedUrl: "https://warm-crag-68291.herokuapp.com/"
     },
     {
-      name: "Grocery booth",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+      name: "Spaced-Out",
+      description: "JavaScript-CSS-HTML-Bootstrap",
+      gitHubUrl:"https://github.com/rawagschal/spaced-out",
+      deployedUrl: "https://rawagschal.github.io/spaced-out/"
     },
     {
-      name: "Building exterior",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+      name: "Weather",
+      description: "JavaScript-CSS-HTML5-jQuery",
+      gitHubUrl:"https://github.com/Kimmulligan/weather",
+      deployedUrl:"https://kimmulligan.github.io/weather/"
     },
     {
-      name: "Restaurant table",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+      name: "Note Taker",
+      description: "CSS-HTML-Express.js",
+      gitHubUrl: "https://github.com/Kimmulligan/note-taker",
+      deployedUrl: "https://note-taker-kim.herokuapp.com/"
     },
     {
-      name: "Cafe interior",
-      category: "commercial",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+      name: "Scheduler",
+      description: "JavaScript-CSS-HTML-JQuery-moment.js",
+      gitHubUrl: 'https://github.com/Kimmulligan/scheduler',
+      deployedUrl: 'https://kimmulligan.github.io/scheduler/'
     },
     {
-      name: "Cat green eyes",
-      category: "portraits",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+      name: "Doctor Who Quiz",
+      description: "JavaScript-CSS-HTML",
+      gitHubUrl: 'https://github.com/Kimmulligan/timed-quiz',
+      deployedUrl: "https://kimmulligan.github.io/timed-quiz/"
     },
+    
   ])
   return (
     <section>
-      <h1 data-testid='h1tag'>{(name)}</h1>
-      <p>{description}</p>
+      <div>
+      <h1>{projects.name}</h1>
+      <p>{projects.description}</p>
+      </div>
       <div className="flex-row">
-        {photos.map((image, i) => (
+        {projects.map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
+            src={require(`../../assets/projectImgs/${i}.png`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
             key={image.name}
           />
         ))}

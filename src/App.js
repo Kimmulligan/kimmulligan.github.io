@@ -3,6 +3,7 @@ import Header from "./component/Header";
 import React, { useState } from "react";
 import About from "./component/About";
 import Contact from "./component/Contact";
+import Portfolio from "./component/Portfolio"
 
 function App() {
   const [contactSelected, setContactSelected] = useState(false);
@@ -30,13 +31,23 @@ function App() {
       <main>
          {!contactSelected ? (
            <>
-          {/* <Gallery currentCategory={currentCategory}></Gallery> */}
+          <Portfolio></Portfolio>
           <About></About>
           </>
          ) : (
           <Contact></Contact>
          )} 
-        
+         {/* {!aboutSelected ? (
+           <> 
+           <Contact></Contact>
+          <Portfolio></Portfolio>
+          </>
+          <About></About>
+         
+         ) : (
+         
+         )} 
+         */}
       </main>
     </div>
   );
