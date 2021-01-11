@@ -36,7 +36,7 @@ body {
   letter-spacing: .1em;
   background: var(--dark);
   color: var(--light);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial, sans-serif';
 
 }
 
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
