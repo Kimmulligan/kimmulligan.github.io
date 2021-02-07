@@ -46,7 +46,7 @@ function Portfolio({ category }) {
       deployedUrl: "https://kimmulligan.github.io/weather/",
     },
   ]);
-  console.log(projects.name);
+  // console.log(projects.name);
   return (
     <section>
       <div className="flex-row">

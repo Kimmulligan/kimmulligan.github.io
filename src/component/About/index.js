@@ -6,7 +6,8 @@ function About() {
   return (
     <section className="my-5">
       <h1 id="about"> Kim Mulligan </h1>
-      <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover"/>
+      <p>Kim is a photography professional and a coding student!</p>
+      <img src={coverImage} className="my-2" style={{ width: "20%" }} alt="cover"/>
     </section>
   );
 }
